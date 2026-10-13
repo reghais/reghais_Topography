@@ -35,7 +35,7 @@ export default function GeologyCalculators() {
 
   return (
     <div className="bg-white dark:bg-slate-900 rounded-2xl border border-slate-200 dark:border-slate-800 p-6 shadow-xl space-y-8">
-
+      
       {/* Header */}
       <div className="flex flex-col md:flex-row md:items-center justify-between gap-4 border-b border-slate-100 dark:border-slate-800 pb-4">
         <div className="flex items-center gap-2">
@@ -55,7 +55,7 @@ export default function GeologyCalculators() {
 
       {/* Calculators Grid */}
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-
+        
         {/* Calc 1: Slope % */}
         <div className="bg-slate-50 dark:bg-slate-800/80 p-5 rounded-2xl border border-slate-200 dark:border-slate-700 space-y-4">
           <h4 className="font-bold text-sm text-slate-900 dark:text-white flex items-center gap-2">
@@ -66,9 +66,9 @@ export default function GeologyCalculators() {
           <div className="space-y-3 text-xs">
             <div>
               <label className="block text-slate-600 dark:text-slate-300 font-semibold mb-1">فارق الارتفاع (ΔH بالمتر):</label>
-              <input
-                type="number"
-                value={deltaH}
+              <input 
+                type="number" 
+                value={deltaH} 
                 onChange={(e) => setDeltaH(Number(e.target.value))}
                 className="w-full bg-white dark:bg-slate-700 border border-slate-300 dark:border-slate-600 rounded-xl px-3 py-2 font-mono font-bold text-slate-900 dark:text-white"
               />
@@ -76,9 +76,9 @@ export default function GeologyCalculators() {
 
             <div>
               <label className="block text-slate-600 dark:text-slate-300 font-semibold mb-1">المسافة الأفقية الحقيقية (D بالمتر):</label>
-              <input
-                type="number"
-                value={distanceD}
+              <input 
+                type="number" 
+                value={distanceD} 
                 onChange={(e) => setDistanceD(Number(e.target.value))}
                 className="w-full bg-white dark:bg-slate-700 border border-slate-300 dark:border-slate-600 rounded-xl px-3 py-2 font-mono font-bold text-slate-900 dark:text-white"
               />
@@ -107,8 +107,8 @@ export default function GeologyCalculators() {
           <div className="space-y-3 text-xs">
             <div>
               <label className="block text-slate-600 dark:text-slate-300 font-semibold mb-1">مقياس الخريطة (1/N):</label>
-              <select
-                value={mapScale}
+              <select 
+                value={mapScale} 
                 onChange={(e) => setMapScale(Number(e.target.value))}
                 className="w-full bg-white dark:bg-slate-700 border border-slate-300 dark:border-slate-600 rounded-xl px-3 py-2 font-mono font-bold text-slate-900 dark:text-white"
               >
@@ -121,10 +121,10 @@ export default function GeologyCalculators() {
 
             <div>
               <label className="block text-slate-600 dark:text-slate-300 font-semibold mb-1">المسافة المقيسة بالمسطرة على الخريطة (d بالسنتيمتر):</label>
-              <input
-                type="number"
-                step="0.1"
-                value={mapDistanceCm}
+              <input 
+                type="number" 
+                step="0.1" 
+                value={mapDistanceCm} 
                 onChange={(e) => setMapDistanceCm(Number(e.target.value))}
                 className="w-full bg-white dark:bg-slate-700 border border-slate-300 dark:border-slate-600 rounded-xl px-3 py-2 font-mono font-bold text-slate-900 dark:text-white"
               />

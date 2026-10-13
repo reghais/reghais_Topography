@@ -18,9 +18,9 @@ export default function QuickSearchModal({ isOpen, onClose, setActiveTab }) {
     { title: 'السيرة الذاتية د. عز الدين رغايس', category: 'حول الأستاذ', tab: 'professor', desc: 'الأبحاث والمنشورات العلمية في الهيدروجيولوجيا والتحليل التركيبي' },
   ];
 
-  const filteredResults = searchTerm.trim() === ''
-    ? searchIndex.slice(0, 5)
-    : searchIndex.filter(item =>
+  const filteredResults = searchTerm.trim() === '' 
+    ? searchIndex.slice(0, 5) 
+    : searchIndex.filter(item => 
         item.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
         item.desc.toLowerCase().includes(searchTerm.toLowerCase()) ||
         item.category.toLowerCase().includes(searchTerm.toLowerCase())
@@ -35,19 +35,19 @@ export default function QuickSearchModal({ isOpen, onClose, setActiveTab }) {
   return (
     <div className="fixed inset-0 z-50 flex items-start justify-center pt-16 px-4 bg-slate-900/60 backdrop-blur-sm animate-fadeIn">
       <div className="bg-white dark:bg-slate-800 rounded-2xl shadow-2xl border border-slate-200 dark:border-slate-700 w-full max-w-2xl overflow-hidden flex flex-col max-h-[80vh]">
-
+        
         {/* Header Search Input */}
         <div className="p-4 border-b border-slate-200 dark:border-slate-700 flex items-center gap-3 bg-slate-50 dark:bg-slate-800/80">
           <Search className="w-5 h-5 text-academic-600 dark:text-amber-400 shrink-0" />
-          <input
-            type="text"
-            placeholder="ابحث في المفاهيم، الدروس، المحاكيات أو التمارين..."
+          <input 
+            type="text" 
+            placeholder="ابحث في المفاهيم، الدروس، المحاكيات أو التمارين..." 
             value={searchTerm}
             onChange={(e) => setSearchTerm(e.target.value)}
             className="w-full bg-transparent border-none outline-none text-slate-800 dark:text-slate-100 placeholder-slate-400 font-bold text-sm"
             autoFocus
           />
-          <button
+          <button 
             onClick={onClose}
             className="p-1 rounded-lg text-slate-400 hover:text-slate-600 dark:hover:text-slate-200 hover:bg-slate-200 dark:hover:bg-slate-700"
           >
@@ -67,7 +67,7 @@ export default function QuickSearchModal({ isOpen, onClose, setActiveTab }) {
             </div>
           ) : (
             filteredResults.map((item, index) => (
-              <div
+              <div 
                 key={index}
                 onClick={() => handleSelect(item.tab)}
                 className="p-3 rounded-xl border border-slate-100 dark:border-slate-700/60 bg-white dark:bg-slate-800 hover:bg-academic-50 dark:hover:bg-slate-700/80 hover:border-academic-300 dark:hover:border-amber-400/30 cursor-pointer transition-all flex items-center justify-between group"

@@ -1,16 +1,16 @@
 import React, { useState, useEffect } from 'react';
-import {
-  BookOpen,
-  Map,
-  Layers,
-  FileText,
-  UserCheck,
-  Mail,
-  Home,
-  Sun,
-  Moon,
-  Menu,
-  X,
+import { 
+  BookOpen, 
+  Map, 
+  Layers, 
+  FileText, 
+  UserCheck, 
+  Mail, 
+  Home, 
+  Sun, 
+  Moon, 
+  Menu, 
+  X, 
   Search,
   GraduationCap
 } from 'lucide-react';
@@ -48,8 +48,8 @@ export default function Navbar({ activeTab, setActiveTab, darkMode, setDarkMode,
 
   return (
     <header className={`sticky top-0 z-50 transition-all duration-300 ${
-      isScrolled
-        ? 'bg-white/95 dark:bg-slate-900/95 backdrop-blur-md shadow-lg border-b border-slate-200 dark:border-slate-800 py-2'
+      isScrolled 
+        ? 'bg-white/95 dark:bg-slate-900/95 backdrop-blur-md shadow-lg border-b border-slate-200 dark:border-slate-800 py-2' 
         : 'bg-white dark:bg-slate-900 border-b border-slate-200 dark:border-slate-800 py-3'
     }`}>
       {/* Top Banner with University Branding */}
@@ -70,13 +70,13 @@ export default function Navbar({ activeTab, setActiveTab, darkMode, setDarkMode,
       {/* Main Navbar */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
-
+          
           {/* Logo & Institution Info */}
           <div className="flex items-center gap-3 cursor-pointer" onClick={() => handleNavClick('home')}>
             <div className="relative flex items-center justify-center w-12 h-12 rounded-xl bg-gradient-to-br from-academic-800 to-academic-900 text-white shadow-md border border-amber-500/30 overflow-hidden">
-              <img
-                src="https://www.ens-setif.dz/images/logo.png"
-                alt="ENS Sétif Logo"
+              <img 
+                src="https://www.ens-setif.dz/images/logo.png" 
+                alt="ENS Sétif Logo" 
                 className="w-10 h-10 object-contain drop-shadow"
                 onError={(e) => {
                   e.target.onerror = null;

@@ -1,13 +1,13 @@
 import React, { useState } from 'react';
-import {
-  BookOpen,
-  ChevronDown,
-  ChevronUp,
-  Map,
-  Layers,
-  HelpCircle,
-  ExternalLink,
-  FileText,
+import { 
+  BookOpen, 
+  ChevronDown, 
+  ChevronUp, 
+  Map, 
+  Layers, 
+  HelpCircle, 
+  ExternalLink, 
+  FileText, 
   Search,
   CheckCircle,
   Info,
@@ -29,7 +29,7 @@ export default function TheoreticalSection() {
           <p>
             <strong className="text-academic-800 dark:text-amber-400">الخريطة الطبوغرافية (Topographic Map):</strong> هي تمثيل هندسي مستوٍ ودقيق ومصغر لجزء من سطح الأرض، يوضح المظاهر الطبيعية (الجبال، الوديان، المجاري المائية) والمظاهر الاصطناعية (الطرق، المنشآت) على مقياس رسم محدد، مع الاعتماد على منحنيات التسوية لإظهار البعد الثالث (الارتفاع والتضاريس).
           </p>
-
+          
           <div className="bg-slate-50 dark:bg-slate-800/80 p-4 rounded-xl border border-slate-200 dark:border-slate-700 space-y-2">
             <h5 className="font-bold text-slate-900 dark:text-white text-xs">العناصر الأساسية للخريطة الطبوغرافية:</h5>
             <ul className="list-disc list-inside space-y-1 text-xs">
@@ -146,7 +146,7 @@ export default function TheoreticalSection() {
       content: (
         <div className="space-y-4 text-slate-700 dark:text-slate-300 text-sm leading-relaxed">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-
+            
             {/* Faults Card */}
             <div className="p-4 bg-slate-50 dark:bg-slate-800/80 rounded-xl border border-slate-200 dark:border-slate-700 space-y-2">
               <h5 className="font-bold text-earth-700 dark:text-amber-300 text-sm flex items-center gap-2">
@@ -205,7 +205,7 @@ export default function TheoreticalSection() {
   return (
     <section className="py-12 bg-white dark:bg-slate-900 transition-colors">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-8">
-
+        
         {/* Header Title */}
         <div className="flex flex-col md:flex-row md:items-end justify-between gap-4 border-b border-slate-200 dark:border-slate-800 pb-6">
           <div className="space-y-2">
@@ -263,11 +263,11 @@ export default function TheoreticalSection() {
           {topicsList.map((topic, index) => {
             const isOpen = openAccordion === index;
             return (
-              <div
+              <div 
                 key={topic.id}
                 className={`rounded-2xl border transition-all duration-200 overflow-hidden ${
-                  isOpen
-                    ? 'border-academic-500 dark:border-amber-400/50 shadow-lg bg-white dark:bg-slate-800'
+                  isOpen 
+                    ? 'border-academic-500 dark:border-amber-400/50 shadow-lg bg-white dark:bg-slate-800' 
                     : 'border-slate-200 dark:border-slate-700/80 bg-slate-50 dark:bg-slate-800/50 hover:bg-white dark:hover:bg-slate-800'
                 }`}
               >
@@ -278,8 +278,8 @@ export default function TheoreticalSection() {
                 >
                   <div className="flex items-center gap-3">
                     <span className={`w-8 h-8 rounded-xl font-mono font-bold text-xs flex items-center justify-center shrink-0 ${
-                      isOpen
-                        ? 'bg-academic-700 text-amber-300'
+                      isOpen 
+                        ? 'bg-academic-700 text-amber-300' 
                         : 'bg-slate-200 dark:bg-slate-700 text-slate-700 dark:text-slate-200'
                     }`}>
                       0{index + 1}
@@ -293,7 +293,7 @@ export default function TheoreticalSection() {
                       </p>
                     </div>
                   </div>
-
+                  
                   <div className="p-2 rounded-lg bg-slate-100 dark:bg-slate-700 text-slate-500 dark:text-slate-300 shrink-0">
                     {isOpen ? <ChevronUp className="w-5 h-5" /> : <ChevronDown className="w-5 h-5" />}
                   </div>

@@ -38,7 +38,7 @@ export default function GeologyMapViewer() {
 
   return (
     <div className="bg-white dark:bg-slate-900 rounded-2xl border border-slate-200 dark:border-slate-800 p-6 shadow-xl space-y-6">
-
+      
       {/* Header */}
       <div className="flex flex-col md:flex-row md:items-center justify-between gap-4 border-b border-slate-100 dark:border-slate-800 pb-4">
         <div className="flex items-center gap-2">
@@ -58,7 +58,7 @@ export default function GeologyMapViewer() {
         {/* Location Switcher */}
         <div className="flex items-center gap-2">
           <label className="text-xs font-bold text-slate-600 dark:text-slate-300">الموقع الميداني:</label>
-          <select
+          <select 
             value={selectedLocation.id}
             onChange={(e) => {
               const loc = locations.find(l => l.id === e.target.value);
@@ -75,12 +75,12 @@ export default function GeologyMapViewer() {
 
       {/* Main Map Container */}
       <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 items-start">
-
+        
         {/* Map Viewport Column */}
         <div className="lg:col-span-8 rounded-2xl overflow-hidden border border-slate-300 dark:border-slate-700 shadow-md h-[400px] relative z-10">
-          <MapContainer
-            center={selectedLocation.coords}
-            zoom={12}
+          <MapContainer 
+            center={selectedLocation.coords} 
+            zoom={12} 
             scrollWheelZoom={true}
             style={{ width: '100%', height: '100%' }}
           >

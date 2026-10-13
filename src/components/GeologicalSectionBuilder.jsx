@@ -10,7 +10,7 @@ export default function GeologicalSectionBuilder() {
 
   return (
     <div className="bg-white dark:bg-slate-900 rounded-2xl border border-slate-200 dark:border-slate-800 p-6 shadow-xl space-y-6">
-
+      
       {/* Header */}
       <div className="flex flex-col md:flex-row md:items-center justify-between gap-4 border-b border-slate-100 dark:border-slate-800 pb-4">
         <div className="flex items-center gap-2">
@@ -52,7 +52,7 @@ export default function GeologicalSectionBuilder() {
       </div>
 
       <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
-
+        
         {/* Left Column: Sliders and Dip Calculator */}
         <div className="lg:col-span-5 bg-slate-50 dark:bg-slate-800/60 p-5 rounded-2xl border border-slate-200 dark:border-slate-700 space-y-5">
           <h4 className="font-bold text-sm text-slate-900 dark:text-white border-b border-slate-200 dark:border-slate-700 pb-2 flex items-center gap-2">
@@ -66,12 +66,12 @@ export default function GeologicalSectionBuilder() {
               <span className="text-slate-700 dark:text-slate-300">زاوية الميل (Dip Angle α):</span>
               <span className="font-mono text-amber-600 dark:text-amber-400">{dipAngle}°</span>
             </div>
-            <input
-              type="range"
-              min="0"
-              max="90"
-              step="5"
-              value={dipAngle}
+            <input 
+              type="range" 
+              min="0" 
+              max="90" 
+              step="5" 
+              value={dipAngle} 
               onChange={(e) => setDipAngle(Number(e.target.value))}
               disabled={layerType === 'horizontal' || layerType === 'vertical'}
               className="w-full accent-amber-500 disabled:opacity-40"
@@ -84,12 +84,12 @@ export default function GeologicalSectionBuilder() {
               <span className="text-slate-700 dark:text-slate-300">المكشاف الظاهري على الخريطة (Width L):</span>
               <span className="font-mono text-sky-600 dark:text-sky-400">{apparentWidth} متر</span>
             </div>
-            <input
-              type="range"
-              min="20"
-              max="300"
-              step="10"
-              value={apparentWidth}
+            <input 
+              type="range" 
+              min="20" 
+              max="300" 
+              step="10" 
+              value={apparentWidth} 
               onChange={(e) => setApparentWidth(Number(e.target.value))}
               className="w-full accent-sky-500"
             />
@@ -128,7 +128,7 @@ export default function GeologicalSectionBuilder() {
 
           <div className="h-72 w-full flex items-center justify-center relative overflow-hidden bg-slate-900 rounded-xl border border-slate-800">
             <svg className="w-full h-full" viewBox="0 0 400 250">
-
+              
               <path d="M 10 70 Q 150 40 250 80 T 390 60" fill="none" stroke="#f59e0b" strokeWidth="2" />
               <text x="20" y="55" fill="#f59e0b" fontSize="10" fontWeight="bold">سطح الأرض (المقطع الطبوغرافي)</text>
 
@@ -136,10 +136,10 @@ export default function GeologicalSectionBuilder() {
                 <g>
                   <path d="M 10 100 L 390 100 L 390 140 L 10 140 Z" fill="#fef08a" opacity="0.6" stroke="#ca8a04" strokeWidth="1.5" />
                   <text x="200" y="125" fill="#854d0e" fontSize="10" textAnchor="middle" fontWeight="bold">طبقة حجر جيري (حجر جيري - سينوماني)</text>
-
+                  
                   <path d="M 10 140 L 390 140 L 390 190 L 10 190 Z" fill="#bfdbfe" opacity="0.6" stroke="#2563eb" strokeWidth="1.5" />
                   <text x="200" y="170" fill="#1e40af" fontSize="10" textAnchor="middle" fontWeight="bold">طبقة مارن وطين (توروني)</text>
-
+                  
                   <path d="M 10 190 L 390 190 L 390 240 L 10 240 Z" fill="#bbf7d0" opacity="0.6" stroke="#16a34a" strokeWidth="1.5" />
                   <text x="200" y="220" fill="#166534" fontSize="10" textAnchor="middle" fontWeight="bold">طبقة غضار وسجيل (أبشي)</text>
                 </g>
@@ -150,7 +150,7 @@ export default function GeologicalSectionBuilder() {
                   <line x1="50" y1="70" x2={50 + 200 * Math.cos((dipAngle * Math.PI) / 180)} y2={70 + 200 * Math.sin((dipAngle * Math.PI) / 180)} stroke="#ef4444" strokeWidth="3" />
                   <line x1="150" y1="70" x2={150 + 200 * Math.cos((dipAngle * Math.PI) / 180)} y2={70 + 200 * Math.sin((dipAngle * Math.PI) / 180)} stroke="#38bdf8" strokeWidth="3" />
                   <line x1="250" y1="70" x2={250 + 200 * Math.cos((dipAngle * Math.PI) / 180)} y2={70 + 200 * Math.sin((dipAngle * Math.PI) / 180)} stroke="#f59e0b" strokeWidth="3" />
-
+                  
                   <text x="200" y="180" fill="#cbd5e1" fontSize="11" textAnchor="middle" fontWeight="bold">
                     طبقات رسوبية مائلة بزاوية {dipAngle}° باتجاه الشرق
                   </text>
@@ -170,7 +170,7 @@ export default function GeologicalSectionBuilder() {
                 <g>
                   <line x1="220" y1="40" x2="160" y2="240" stroke="#ef4444" strokeWidth="3" strokeDasharray="6 3" />
                   <text x="235" y="50" fill="#ef4444" fontSize="11" fontWeight="bold">مرآة الفالق العادي (Fault Plane)</text>
-
+                  
                   <line x1="30" y1="110" x2="185" y2="110" stroke="#38bdf8" strokeWidth="3" />
                   <line x1="195" y1="150" x2="370" y2="150" stroke="#38bdf8" strokeWidth="3" />
                 </g>

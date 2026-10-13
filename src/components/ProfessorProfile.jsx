@@ -35,11 +35,11 @@ export default function ProfessorProfile() {
 
   return (
     <div className="bg-white dark:bg-slate-900 rounded-2xl border border-slate-200 dark:border-slate-800 p-6 shadow-xl space-y-8">
-
+      
       {/* Hero Header Banner */}
       <div className="relative overflow-hidden bg-gradient-to-br from-academic-900 to-slate-900 text-white rounded-2xl p-6 sm:p-8 shadow-2xl">
         <div className="flex flex-col md:flex-row items-center gap-6 relative z-10">
-
+          
           <div className="w-24 h-24 sm:w-28 sm:h-28 rounded-2xl bg-amber-400 text-slate-950 flex items-center justify-center font-black text-3xl shadow-xl shrink-0 border-4 border-white/20">
             د.ع
           </div>
@@ -62,9 +62,9 @@ export default function ProfessorProfile() {
             </p>
 
             <div className="pt-2 flex flex-wrap items-center justify-center md:justify-start gap-3">
-              <a
-                href="https://www.researchgate.net/profile/Azzeddine-Reghais"
-                target="_blank"
+              <a 
+                href="https://www.researchgate.net/profile/Azzeddine-Reghais" 
+                target="_blank" 
                 rel="noopener noreferrer"
                 className="px-4 py-2 rounded-xl bg-amber-400 hover:bg-amber-300 text-slate-950 font-black text-xs shadow flex items-center gap-2 transition-colors"
               >
@@ -83,7 +83,7 @@ export default function ProfessorProfile() {
 
       {/* Grid: Biography & Research Focus */}
       <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
-
+        
         <div className="lg:col-span-5 bg-slate-50 dark:bg-slate-800/80 p-5 rounded-2xl border border-slate-200 dark:border-slate-700 space-y-4">
           <h3 className="font-bold text-base text-slate-900 dark:text-white border-b border-slate-200 dark:border-slate-700 pb-2 flex items-center gap-2">
             <GraduationCap className="w-5 h-5 text-academic-600 dark:text-amber-400" />
@@ -122,9 +122,9 @@ export default function ProfessorProfile() {
                 </p>
                 <div className="pt-2 flex justify-between items-center text-xs border-t border-slate-100 dark:border-slate-700/60">
                   <span className="text-slate-400">{pub.authors}</span>
-                  <a
-                    href={pub.link}
-                    target="_blank"
+                  <a 
+                    href={pub.link} 
+                    target="_blank" 
                     rel="noopener noreferrer"
                     className="text-amber-600 dark:text-amber-400 font-bold hover:underline flex items-center gap-1"
                   >
