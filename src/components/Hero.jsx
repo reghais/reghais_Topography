@@ -1,13 +1,13 @@
 import React from 'react';
-import {
-  Compass,
-  MapPin,
-  GraduationCap,
-  ArrowLeft,
-  Sparkles,
-  BookOpen,
-  Layers,
-  Activity,
+import { 
+  Compass, 
+  MapPin, 
+  GraduationCap, 
+  ArrowLeft, 
+  Sparkles, 
+  BookOpen, 
+  Layers, 
+  Activity, 
   ExternalLink,
   Award
 } from 'lucide-react';
@@ -15,7 +15,7 @@ import {
 export default function Hero({ setActiveTab }) {
   return (
     <div className="relative overflow-hidden bg-gradient-to-b from-academic-900 via-academic-800 to-slate-900 text-white pt-10 pb-16 lg:pt-16 lg:pb-24 border-b border-academic-700/50">
-
+      
       {/* Dynamic Geological/Cartographic Background Graphics */}
       <div className="absolute inset-0 opacity-10 pointer-events-none">
         <svg className="w-full h-full" xmlns="http://www.w3.org/2000/svg">
@@ -30,10 +30,10 @@ export default function Hero({ setActiveTab }) {
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
-
+          
           {/* Main Hero Content Column */}
           <div className="lg:col-span-7 space-y-6 text-right">
-
+            
             {/* University & Module Badges */}
             <div className="flex flex-wrap items-center gap-2">
               <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-extrabold bg-amber-400 text-slate-950 shadow-md">
@@ -47,7 +47,7 @@ export default function Hero({ setActiveTab }) {
 
             {/* Title & Tagline */}
             <h1 className="text-3xl sm:text-4xl lg:text-5xl font-black tracking-tight leading-tight text-white">
-              منصة علم الخرائط والجيولوجيا العامة
+              منصة علم الخرائط والجيولوجيا العامة 
               <span className="block mt-2 text-transparent bg-clip-text bg-gradient-to-l from-amber-300 via-amber-200 to-emerald-300">
                 الخرائط الطبوغرافية والجيولوجية
               </span>
@@ -68,9 +68,9 @@ export default function Hero({ setActiveTab }) {
                   <div className="text-xs text-slate-400 font-semibold">أستاذ المادة وتصحيح التطبيقات:</div>
                   <div className="text-sm font-bold text-white flex items-center gap-2">
                     <span>د. عز الدين رغايس (Azzeddine Reghais)</span>
-                    <a
-                      href="https://www.researchgate.net/profile/Azzeddine-Reghais"
-                      target="_blank"
+                    <a 
+                      href="https://www.researchgate.net/profile/Azzeddine-Reghais" 
+                      target="_blank" 
                       rel="noopener noreferrer"
                       className="text-amber-400 hover:text-amber-300 text-xs flex items-center gap-0.5 underline font-normal"
                     >
@@ -125,7 +125,7 @@ export default function Hero({ setActiveTab }) {
           {/* Hero Visual Card / Interactive Preview */}
           <div className="lg:col-span-5">
             <div className="relative bg-slate-800/90 rounded-2xl p-6 border border-slate-700 shadow-2xl space-y-5">
-
+              
               {/* Card Header */}
               <div className="flex items-center justify-between border-b border-slate-700/80 pb-4">
                 <div className="flex items-center gap-2">
@@ -140,7 +140,7 @@ export default function Hero({ setActiveTab }) {
 
               {/* Graphic Mockup Area */}
               <div className="bg-slate-900 rounded-xl p-4 border border-slate-700 relative overflow-hidden group">
-
+                
                 {/* Dynamic SVG Topography Representation */}
                 <div className="h-48 w-full flex items-center justify-center relative">
                   <svg className="w-full h-full" viewBox="0 0 300 180">

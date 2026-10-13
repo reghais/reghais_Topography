@@ -1,13 +1,13 @@
 import React from 'react';
-import {
-  GraduationCap,
-  MapPin,
-  Phone,
-  Mail,
-  ExternalLink,
-  BookOpen,
-  Layers,
-  UserCheck,
+import { 
+  GraduationCap, 
+  MapPin, 
+  Phone, 
+  Mail, 
+  ExternalLink, 
+  BookOpen, 
+  Layers, 
+  UserCheck, 
   ShieldCheck,
   ChevronLeft
 } from 'lucide-react';
@@ -27,14 +27,14 @@ export default function Footer({ setActiveTab }) {
       {/* Main Footer Content */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-12 pb-8 relative z-10">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
-
+          
           {/* Column 1: Institution Info */}
           <div className="space-y-4">
             <div className="flex items-center gap-3">
               <div className="w-12 h-12 rounded-xl bg-white/10 p-2 border border-white/20 flex items-center justify-center">
-                <img
-                  src="https://www.ens-setif.dz/images/logo.png"
-                  alt="ENS Sétif"
+                <img 
+                  src="https://www.ens-setif.dz/images/logo.png" 
+                  alt="ENS Sétif" 
                   className="w-10 h-10 object-contain"
                   onError={(e) => {
                     e.target.onerror = null;
@@ -103,9 +103,9 @@ export default function Footer({ setActiveTab }) {
               <p className="text-[11px] text-slate-400 leading-normal">
                 باحث واستاذ في الهيدروجيولوجيا والخرائط الجيولوجية والتحليل التركيبي - مخبر الهندسة الجيولوجية، جامعة جيجل.
               </p>
-              <a
-                href="https://www.researchgate.net/profile/Azzeddine-Reghais"
-                target="_blank"
+              <a 
+                href="https://www.researchgate.net/profile/Azzeddine-Reghais" 
+                target="_blank" 
                 rel="noopener noreferrer"
                 className="inline-flex items-center gap-1.5 text-[11px] font-bold text-amber-300 hover:text-amber-200 transition-colors pt-1"
               >
@@ -135,9 +135,9 @@ export default function Footer({ setActiveTab }) {
               </li>
               <li className="flex items-center gap-2">
                 <BookOpen className="w-4 h-4 text-amber-400 shrink-0" />
-                <a
-                  href="https://www.ens-setif.dz"
-                  target="_blank"
+                <a 
+                  href="https://www.ens-setif.dz" 
+                  target="_blank" 
                   rel="noopener noreferrer"
                   className="hover:underline text-amber-300 font-mono"
                 >

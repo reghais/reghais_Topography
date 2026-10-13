@@ -31,24 +31,24 @@ export default function App() {
 
   return (
     <div className="min-h-screen flex flex-col bg-slate-50 dark:bg-slate-900 text-slate-800 dark:text-slate-100 transition-colors duration-200">
-
-      <Navbar
-        activeTab={activeTab}
-        setActiveTab={setActiveTab}
-        darkMode={darkMode}
+      
+      <Navbar 
+        activeTab={activeTab} 
+        setActiveTab={setActiveTab} 
+        darkMode={darkMode} 
         setDarkMode={setDarkMode}
         onSearchOpen={() => setIsSearchOpen(true)}
       />
 
       <main className="flex-1 max-w-7xl w-full mx-auto px-4 sm:px-6 lg:px-8 py-8 space-y-8">
-
+        
         {activeTab === 'home' && <HomePage setActiveTab={setActiveTab} />}
 
         {activeTab === 'theory' && <TheoreticalSection />}
 
         {activeTab === 'practical' && (
           <div className="space-y-6">
-
+            
             <div className="bg-white dark:bg-slate-800 p-2 rounded-2xl border border-slate-200 dark:border-slate-700 shadow-sm flex flex-wrap gap-2 justify-center sm:justify-start">
               <button
                 onClick={() => setPracticalSubTab('canvas')}
@@ -142,10 +142,10 @@ export default function App() {
 
       <Footer setActiveTab={setActiveTab} />
 
-      <QuickSearchModal
-        isOpen={isSearchOpen}
-        onClose={() => setIsSearchOpen(false)}
-        setActiveTab={setActiveTab}
+      <QuickSearchModal 
+        isOpen={isSearchOpen} 
+        onClose={() => setIsSearchOpen(false)} 
+        setActiveTab={setActiveTab} 
       />
 
     </div>

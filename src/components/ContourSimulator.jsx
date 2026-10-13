@@ -13,7 +13,7 @@ export default function ContourSimulator() {
 
     for (let i = 1; i <= Math.min(numContours, 10); i++) {
       const elevation = i * contourInterval;
-
+      
       let rx, ry, cx = 200, cy = 150;
 
       if (landformType === 'peak') {
@@ -44,7 +44,7 @@ export default function ContourSimulator() {
 
   return (
     <div className="bg-white dark:bg-slate-900 rounded-2xl border border-slate-200 dark:border-slate-800 p-6 shadow-xl space-y-6">
-
+      
       {/* Header */}
       <div className="flex flex-col md:flex-row md:items-center justify-between gap-4 border-b border-slate-100 dark:border-slate-800 pb-4">
         <div className="flex items-center gap-2">
@@ -85,7 +85,7 @@ export default function ContourSimulator() {
       </div>
 
       <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
-
+        
         {/* Controls Column */}
         <div className="lg:col-span-5 bg-slate-50 dark:bg-slate-800/60 p-5 rounded-2xl border border-slate-200 dark:border-slate-700 space-y-5">
           <h4 className="font-bold text-sm text-slate-900 dark:text-white border-b border-slate-200 dark:border-slate-700 pb-2">
@@ -98,12 +98,12 @@ export default function ContourSimulator() {
               <span className="text-slate-700 dark:text-slate-300">أقصى ارتفاع للقمة (Height H):</span>
               <span className="font-mono text-amber-600 dark:text-amber-400">{peakHeight} متر</span>
             </div>
-            <input
-              type="range"
-              min="100"
-              max="1000"
-              step="50"
-              value={peakHeight}
+            <input 
+              type="range" 
+              min="100" 
+              max="1000" 
+              step="50" 
+              value={peakHeight} 
               onChange={(e) => setPeakHeight(Number(e.target.value))}
               className="w-full accent-academic-600"
             />
@@ -115,12 +115,12 @@ export default function ContourSimulator() {
               <span className="text-slate-700 dark:text-slate-300">شدة الانحدار (Slope Steepness):</span>
               <span className="font-mono text-emerald-600 dark:text-emerald-400">{slopeSteepness}%</span>
             </div>
-            <input
-              type="range"
-              min="10"
-              max="90"
-              step="5"
-              value={slopeSteepness}
+            <input 
+              type="range" 
+              min="10" 
+              max="90" 
+              step="5" 
+              value={slopeSteepness} 
               onChange={(e) => setSlopeSteepness(Number(e.target.value))}
               className="w-full accent-emerald-500"
             />

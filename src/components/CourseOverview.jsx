@@ -1,13 +1,13 @@
 import React from 'react';
-import {
-  BookOpen,
-  Map,
-  Layers,
-  Compass,
-  Award,
-  CheckCircle2,
-  ArrowLeft,
-  UserCheck,
+import { 
+  BookOpen, 
+  Map, 
+  Layers, 
+  Compass, 
+  Award, 
+  CheckCircle2, 
+  ArrowLeft, 
+  UserCheck, 
   FileText,
   MousePointer,
   Calculator,
@@ -83,10 +83,10 @@ export default function CourseOverview({ setActiveTab }) {
   return (
     <section className="py-16 bg-slate-50 dark:bg-slate-900/60 transition-colors">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-16">
-
+        
         {/* Section 1: Objectives & Target Competencies */}
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
-
+          
           <div className="lg:col-span-5 space-y-4">
             <span className="text-xs font-black uppercase tracking-wider text-academic-600 dark:text-amber-400 bg-academic-100 dark:bg-academic-900/80 px-3 py-1 rounded-full">
               الأهداف التعلمية والكفاءات
@@ -120,9 +120,9 @@ export default function CourseOverview({ setActiveTab }) {
                   <span>عرض السيرة الذاتية والأبحاث</span>
                   <ArrowLeft className="w-3.5 h-3.5" />
                 </button>
-                <a
-                  href="https://www.researchgate.net/profile/Azzeddine-Reghais"
-                  target="_blank"
+                <a 
+                  href="https://www.researchgate.net/profile/Azzeddine-Reghais" 
+                  target="_blank" 
                   rel="noopener noreferrer"
                   className="text-[11px] font-bold text-slate-500 hover:text-slate-800 dark:text-slate-400 flex items-center gap-1"
                 >
@@ -228,7 +228,7 @@ export default function CourseOverview({ setActiveTab }) {
             {interactiveTools.map((tool, idx) => {
               const Icon = tool.icon;
               return (
-                <div
+                <div 
                   key={idx}
                   onClick={() => setActiveTab(tool.tab)}
                   className="bg-slate-800/80 hover:bg-slate-800 border border-slate-700 hover:border-amber-400/50 p-5 rounded-2xl cursor-pointer transition-all duration-300 group flex flex-col justify-between"

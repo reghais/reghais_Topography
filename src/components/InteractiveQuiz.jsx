@@ -98,7 +98,7 @@ export default function InteractiveQuiz() {
 
   return (
     <div className="bg-white dark:bg-slate-900 rounded-2xl border border-slate-200 dark:border-slate-800 p-6 shadow-xl space-y-6">
-
+      
       {/* Header */}
       <div className="flex flex-col md:flex-row md:items-center justify-between gap-4 border-b border-slate-100 dark:border-slate-800 pb-4">
         <div className="flex items-center gap-2">
@@ -123,7 +123,7 @@ export default function InteractiveQuiz() {
 
       {!showResults ? (
         <div className="space-y-6 max-w-3xl mx-auto">
-
+          
           <div className="bg-slate-50 dark:bg-slate-800/80 p-5 rounded-2xl border border-slate-200 dark:border-slate-700 space-y-2">
             <span className="text-[11px] font-bold px-2.5 py-0.5 rounded bg-purple-100 text-purple-800 dark:bg-purple-950 dark:text-purple-200">
               سؤال تقويمي رقم 0{q.id}
@@ -139,7 +139,7 @@ export default function InteractiveQuiz() {
               const isCorrect = idx === q.correctIndex;
 
               let btnClass = "border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-800 hover:bg-slate-50 dark:hover:bg-slate-700/80 text-slate-800 dark:text-slate-100";
-
+              
               if (isAnswered) {
                 if (isCorrect) {
                   btnClass = "border-emerald-500 bg-emerald-50 dark:bg-emerald-950/60 text-emerald-900 dark:text-emerald-200 font-bold";

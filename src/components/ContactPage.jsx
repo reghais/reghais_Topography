@@ -15,7 +15,7 @@ export default function ContactPage() {
 
   return (
     <div className="bg-white dark:bg-slate-900 rounded-2xl border border-slate-200 dark:border-slate-800 p-6 shadow-xl space-y-8">
-
+      
       {/* Header */}
       <div className="flex flex-col md:flex-row md:items-center justify-between gap-4 border-b border-slate-100 dark:border-slate-800 pb-4">
         <div className="flex items-center gap-2">
@@ -34,7 +34,7 @@ export default function ContactPage() {
       </div>
 
       <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
-
+        
         {/* Contact Form */}
         <div className="lg:col-span-6 bg-slate-50 dark:bg-slate-800/80 p-6 rounded-2xl border border-slate-200 dark:border-slate-700 space-y-4">
           <h4 className="font-bold text-base text-slate-900 dark:text-white flex items-center gap-2 border-b border-slate-200 dark:border-slate-700 pb-3">
@@ -54,10 +54,10 @@ export default function ContactPage() {
             <form onSubmit={handleSubmit} className="space-y-4 text-xs">
               <div>
                 <label className="block text-slate-700 dark:text-slate-300 font-bold mb-1">الاسم الكامل:</label>
-                <input
-                  type="text"
+                <input 
+                  type="text" 
                   required
-                  placeholder="مثال: محمد الأمين"
+                  placeholder="مثال: محمد الأمين" 
                   value={formData.name}
                   onChange={(e) => setFormData({ ...formData, name: e.target.value })}
                   className="w-full bg-white dark:bg-slate-700 border border-slate-300 dark:border-slate-600 rounded-xl px-3.5 py-2.5 font-semibold text-slate-900 dark:text-white focus:outline-none focus:ring-2 focus:ring-academic-500"
@@ -66,10 +66,10 @@ export default function ContactPage() {
 
               <div>
                 <label className="block text-slate-700 dark:text-slate-300 font-bold mb-1">البريد الإلكتروني:</label>
-                <input
-                  type="email"
+                <input 
+                  type="email" 
                   required
-                  placeholder="student@ens-setif.dz"
+                  placeholder="student@ens-setif.dz" 
                   value={formData.email}
                   onChange={(e) => setFormData({ ...formData, email: e.target.value })}
                   className="w-full bg-white dark:bg-slate-700 border border-slate-300 dark:border-slate-600 rounded-xl px-3.5 py-2.5 font-semibold text-slate-900 dark:text-white focus:outline-none focus:ring-2 focus:ring-academic-500"
@@ -78,10 +78,10 @@ export default function ContactPage() {
 
               <div>
                 <label className="block text-slate-700 dark:text-slate-300 font-bold mb-1">موضوع الرسالة:</label>
-                <input
-                  type="text"
+                <input 
+                  type="text" 
                   required
-                  placeholder="استفسار بخصوص تمرين / مقطع طبوغرافي..."
+                  placeholder="استفسار بخصوص تمرين / مقطع طبوغرافي..." 
                   value={formData.subject}
                   onChange={(e) => setFormData({ ...formData, subject: e.target.value })}
                   className="w-full bg-white dark:bg-slate-700 border border-slate-300 dark:border-slate-600 rounded-xl px-3.5 py-2.5 font-semibold text-slate-900 dark:text-white focus:outline-none focus:ring-2 focus:ring-academic-500"
@@ -90,10 +90,10 @@ export default function ContactPage() {
 
               <div>
                 <label className="block text-slate-700 dark:text-slate-300 font-bold mb-1">نص الرسالة / الاستفسار:</label>
-                <textarea
+                <textarea 
                   rows={4}
                   required
-                  placeholder="اكتب سؤالك هنا التفاصيل..."
+                  placeholder="اكتب سؤالك هنا التفاصيل..." 
                   value={formData.message}
                   onChange={(e) => setFormData({ ...formData, message: e.target.value })}
                   className="w-full bg-white dark:bg-slate-700 border border-slate-300 dark:border-slate-600 rounded-xl px-3.5 py-2.5 font-semibold text-slate-900 dark:text-white focus:outline-none focus:ring-2 focus:ring-academic-500 resize-none"
@@ -113,7 +113,7 @@ export default function ContactPage() {
 
         {/* Institution Info & Campus Map */}
         <div className="lg:col-span-6 space-y-6">
-
+          
           <div className="bg-white dark:bg-slate-800 p-5 rounded-2xl border border-slate-200 dark:border-slate-700 shadow-sm space-y-3 text-xs">
             <h4 className="font-bold text-sm text-slate-900 dark:text-white flex items-center gap-2 border-b border-slate-100 dark:border-slate-700 pb-2">
               <Building2 className="w-5 h-5 text-amber-500" />
@@ -141,9 +141,9 @@ export default function ContactPage() {
           </div>
 
           <div className="rounded-2xl overflow-hidden border border-slate-300 dark:border-slate-700 shadow-md h-64 relative z-10">
-            <MapContainer
-              center={ensCoords}
-              zoom={14}
+            <MapContainer 
+              center={ensCoords} 
+              zoom={14} 
               scrollWheelZoom={false}
               style={{ width: '100%', height: '100%' }}
             >
